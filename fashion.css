@@ -1,0 +1,262 @@
+/* 1. Reset Dasar */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* Menghilangkan scroll horizontal jika ada konten berlebih */
+    overflow-x: hidden; 
+}
+
+/* 2. Container Utama */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f2937; /* Biru gelap */
+    min-height: 100vh;
+}
+
+/* 3. Navbar (Sudah digabung agar tidak duplikat) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15%; /* Jarak konsisten dengan Hero */
+}
+
+.logo {
+    color: #f9faf8;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #e5e7eb;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: 0.3s; /* Agar perubahan warna saat hover lebih halus */
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* 4. Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    /* Padding atas dikurangi sedikit agar tidak terlalu jauh dari navbar */
+    padding: 60px 15% 100px 15%; 
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px; /* Batas lebar maksimal agar tidak terlalu melar di layar lebar */
+}
+
+/* 5. Konten Hero (Teks & Gambar) */
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #f9faf8;
+    margin: 0 0 15px 0;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #e5e7eb;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Tombol */
+.signup-btn {
+    background-color: #3882f6;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Gambar Placeholder */
+.hero-image {
+    flex: 1;
+}
+
+.image-placeholder {
+    background-color: #6b7280;
+    height: 250px; 
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f9faf8;
+    border: 2px solid #4b5563;
+    /* Tambahkan ini agar gambar yang berlebih terpotong sesuai border-radius */
+    overflow: hidden; 
+}
+
+.image-placeholder img {
+    /* Pastikan gambar mengisi seluruh area kotak */
+    width: 100%;
+    height: 100%;
+    /* Memastikan gambar tetap proporsional dan menutupi kotak */
+    object-fit: cover; 
+    display: block;
+}
+
+/* Info Section */
+
+.info-section {
+    padding: 60px 15%;
+    text-align: center;
+    background-color: white; /* Latar belakang putih sesuai gambar */
+}
+
+.info-section h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1f2937;
+    margin-bottom: 40px;
+}
+
+/* Mengatur barisan kartu */
+.info-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Agar responsif jika layar kecil */
+}
+
+/* Styling masing-masing kartu */
+.card {
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Kotak gambar dengan border biru */
+.card-box {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #3882f6; /* Border biru sesuai gambar */
+    border-radius: 15px;
+    overflow: hidden; /* Agar gambar mengikuti lengkungan border */
+    margin-bottom: 10px;
+}
+
+.card-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Teks di bawah kotak */
+.card p {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.2;
+}
+
+/* Container Utama Quotes */
+.quote-section {
+    background-color: #e5e7eb; /* Warna abu-abu terang */
+    padding: 100px 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Membungkus teks agar tidak terlalu lebar */
+.quote-container {
+    max-width: 800px;
+}
+
+/* Styling teks quote */
+.quote-text {
+    font-size: 36px;
+    font-style: italic; /* Membuat teks miring */
+    color: #1f2937;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+/* Styling nama pengarang (Thor) */
+.quote-author {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+    text-align: right; /* Menjorok ke kanan sesuai gambar */
+}
+
+/* --- CALL TO ACTION SECTION --- */
+.cta-section {
+    padding: 80px 15%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.cta-banner {
+    background-color: #3882f6; /* Warna biru cerah */
+    padding: 50px 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.cta-text h3 {
+    color: #f9faf8;
+    font-size: 24px;
+    margin: 0 0 5px 0;
+}
+
+.cta-text p {
+    color: #e5e7eb;
+    margin: 0;
+}
+
+.cta-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white; /* Border putih tipis sesuai gambar */
+    padding: 8px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: white;
+    color: #3882f6;
+}
+
+/* --- FOOTER SECTION --- */
+.footer {
+    background-color: #1f2937; /* Warna gelap sama dengan navbar */
+    color: #f9faf8;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}
